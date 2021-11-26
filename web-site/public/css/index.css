@@ -1,0 +1,379 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.tittle {
+    display: flex;
+    justify-content: center;
+    font-size: 8vh;
+    max-width: 70%;
+    font-weight: bold;
+}
+
+.video {
+    width: 100%;
+}
+
+.texto_video {
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    top: 22vw;
+    left: 25vw;
+    font-size: 5vw;
+    font-weight: bold;
+    max-width: 50%;
+    line-height: 5vw;
+    height: 10vw;
+}
+
+/* Sobre */
+
+.container_about {
+    width: 100%;
+    background-color: rgb(250, 250, 250);
+}
+
+.box_about {
+    width: 100%;
+}
+
+.box_about img {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    height: 25vw;
+}
+
+.text_about {
+    font-size: 1.5vw;
+    padding-bottom: 8%;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    color: #71706F;
+}
+
+.texto_cliente {
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+hr {
+    width: 10vw;
+    border: 0;
+    border-top: 4px solid #23001E;
+}
+
+.espaco_cliente {
+    margin: 4vw;
+}
+
+.imagem_div1 {
+    width: 100%;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+.imagem_div1 img {
+    height: 10vw;
+    width: 10vw;
+    transition-duration: 1s;
+    transform-origin: 50% 50%;
+    opacity: 0.2;
+    filter: grayscale(1);
+    cursor: pointer;
+}
+
+.imagem_div1 img:hover {
+    filter: none;
+    opacity: 1;
+    transition: 1s;
+    transform: scale(1.2);
+}
+
+.imagem_div2 {
+    width: 100%;
+    justify-content: space-around;
+    padding-top: 5vw;
+    max-width: 75%;
+    display: flex;
+}
+
+.imagem_div2 img {
+    height: 10vw;
+    width: 10vw;
+    cursor: pointer;
+    margin-bottom: 10vw;
+    margin-right: -17vw;
+    transform-origin: 50% 50%;
+    transition-duration: 1s;
+    opacity: 0.2;
+    filter: grayscale(1);
+}
+
+.imagem_div2 img:hover {
+    filter: none;
+    opacity: 1;
+    transition: 1s;
+    transform: scale(1.2);
+}
+
+.planos {
+    background-image: url(../img/fundo_planos.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 6vw;
+    padding-bottom: 6vw;
+}
+
+.box_plans {
+    background-color: #23001E;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    color: white;
+}
+
+.caixa_plano {
+    height: 8vw;
+    background: white;
+    max-width: 80%;
+    margin: -4vw auto 0;
+    border-radius: 0.25vw;
+}
+
+.planos div h1 {
+    font-size: 3vw;
+    color: white;
+    padding-top: 2vw;
+    margin: 0;
+    height: 8vw;
+}
+
+.cabecalho_plano {
+    width: 100%;
+    color: black;
+    background: #4a3347;
+}
+
+.texto_plano {
+    padding: 2vw;
+    width: 84%;
+    font-size: 1.3vw;
+    height: 68%;
+}
+
+.texto_plano p {
+    line-height: 1.8;
+}
+
+.texto_plano_pago {
+    width: 100%;
+    height: 8vw;
+    padding-top: 3vw;
+    font-size: 1.5vw;
+    color: #232323;
+}
+
+/* Missão */
+
+.container_mission {
+    width: 100%;
+    margin-top: 8vw;
+    margin-bottom: 8vw;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+.box_mission {
+    display: flex;
+    width: 80%;
+    align-items: baseline;
+}
+
+.mission_css {
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+.mission_css h3 {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    font-size: 1.4vw;
+}
+
+.mission_css p {
+    width: 60%;
+    margin: auto;
+    font-size: 1.4vw;
+}
+
+.mission_css img {
+    height: 8vw;
+}
+
+/* Plans */
+
+.container_plans {
+    max-height: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.cad_leads {
+    background-color: #23001E;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.cad_leads div {
+    width: 40%;
+    height: 55%;
+    padding-top: 6vw;
+    padding-bottom: 2vw;
+    font-size: 1.1vw;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cad_leads div h2 {
+    font-size: 2vw;
+}
+
+.text_form {
+    justify-content: center;
+}
+
+.text_form h2 {
+    width: 100%;
+}
+
+.text_form p {
+    width: 100%;
+    font-size: 1.2vw;
+}
+
+.input_form {
+    width: 38%;
+    height: 3vw;
+    font-size: 100%;
+    padding: 1% 5%;
+    margin-top: 3%;
+    border: 1px solid white;
+    background: #ffffff00;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.input_form:hover {
+    background: #ffffff24;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+}
+
+::-webkit-input-placeholder {
+    color: white;
+}
+
+:-moz-placeholder {
+    color: white;
+}
+
+::-moz-placeholder {
+    color: white;
+}
+
+:-ms-input-placeholder {
+    color: white;
+}
+
+.desc_form {
+    width: 100%;
+    font-size: 1.1vw;
+    margin-top: 2.5%;
+    padding: 15% 5%;
+    color: white;
+    border: 1px solid white;
+    background: #ffffff00;
+}
+
+.desc_form:hover {
+    background: #ffffff24;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    color: white;
+}
+
+.button_form {
+    width: 7vw;
+    height: 3.5vw;
+    background: white;
+    font-size: 1vw;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid white;
+    margin-top: 2.5%
+}
+
+.button_form:hover {
+    background: #ffffff24;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    color: white;
+    border: solid 1px white
+}
+
+.cor_orcamento {
+    font-size: 2.2vw;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cor_orcamento a {
+    text-decoration: none;
+    transition: 0.2s ease-in;
+    color: rgb(84, 0, 139);
+}
+
+.cor_orcamento a:hover {
+    color: rgb(153, 0, 255);
+}
+
+.container_contact {
+    max-height: 100%;
+    width: 100%;
+}
+
+.h3_empresa {
+    color: rgb(113, 112, 111);
+}
+
+.txt_empresa {
+    color: rgb(113, 112, 111);
+}
+
+.img_visao {
+    height: 5vw;
+}

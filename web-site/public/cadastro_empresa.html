@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form_cadastro" method="post">
+        <div> <span>company_name </span>
+            <input type="text" class="ipt1" name="company_name" id="company_name" class="email" placeholder="Insira o nome">
+        </div><br>
+        <div> <span> company_cnpj </span>
+            <input type="text" class="ipt1" name="company_cnpj" id="company_cnpj"
+                placeholder="Insira o Telefone">
+        </div><br>
+        <div> <span>company_andres</span>
+            <input type="text" class="ipt1" name="company_andress" id="company_andress" placeholder="Insira o e-mail">
+        </div><br>
+        <div> <span> company_email</span>
+            <input type="password" class="ipt3" name="company_email" id="company_email" placeholder="Insira a Senha">
+        </div><br>
+        <div><span> company_password</span>
+            <input type="text" class="ipt2" name="company_password" id="company_password" maxlength="5"
+                placeholder="Insira a indentificação">
+            <span> company_phone_number</span>
+            <input type="text" class="ipt2" name="company_phone_number" id="company_phone_number" maxlength="5"
+                placeholder="Insira a indentificação">
+        </div><br>
+        <div class="linha"></div>
+        <br>
+    </form>
+</body>
+</html>
+<script>
+        function cadastrar() {
+
+    var formulario = new URLSearchParams(new FormData(form_cadastro));
+    fetch("/empresas/register", {
+        method: "POST",
+        body: formulario
+    }).then(function (response) {
+
+        if (response.ok) {
+            
+        } else {
+
+            console.log('Erro de cadastro!');
+            response.text().then(function (resposta) {
+                div_erro.innerHTML = resposta;
+            });
+        }
+    });
+
+    return false;
+} 
+</script>

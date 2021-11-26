@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: Raleway;
+}
+
+body {
+    background-image: url("../img/fundo-perfil-funcionario.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #752158;
+}
+
+body::-webkit-scrollbar-track {
+    background: #ecf0f1;
+}
+
+/* Header */ 
+
+header {
+    background-color: rgba(166, 162, 170, 0.4);
+    width: 100%;
+    height: 110px;
+    align-items: center;
+  
+}
+
+.container {
+    max-width: 90%;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.logo a img {
+    width: 160px;
+    margin-left: -20%;
+}
+
+
+.photo-user{
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+}
+
+.menu{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding-top: 0.3%;
+}
+
+h1{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 150%
+} 
+
+h2{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 150%
+}
+
+.cx-alert{
+    max-width: 90%;
+    width: 100%;
+    margin: 3% auto auto auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.percnt-cpu{
+    margin-top: 5%;
+    background-color: rgba(230, 225, 237, 0.3);
+    border: 1px solid rgb(116, 194, 126);
+    width: 40%;
+    height: 10%;
+    text-align: center;
+}
+
+.purple{
+    color: #1b022c;
+}
+
+.estado-cpu{
+    color: rgb(7, 75, 7);
+}
+
+.temp-cpu{
+    margin-top: 5%;
+    background-color: rgba(230, 225, 237, 0.3);
+    border: 1px solid rgb(116, 194, 126);
+    width: 40%;
+    height: 7%;
+    text-align: center;
+}
+
+.percnt-ram{
+    background-color: rgba(230, 225, 237, 0.3);
+    border: 1px solid rgb(250, 223, 103);
+    width: 40%;
+    height: 30%;
+    text-align: center;
+}
+
+.estado-ram{
+    color: rgb(65, 68, 17);
+}
+
+.percnt-disk{
+    background-color: rgba(230, 225, 237, 0.3);
+    border: 1px solid rgb(226, 31, 31);
+    width: 40%;
+    height: 70%;
+    text-align: center;
+}
+
+.estado-disk{
+    color: rgb(185, 33, 22);
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5%;
+}
+
+.action{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.action .profile{
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+
+.action .profile img{
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.action .menu{
+    position: absolute;
+    top: 80px;
+    padding: 10px 20px;
+    background-color: rgb(166, 162, 170);
+    width: 200px;
+    right: -10px;
+    border-radius: 15px;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
+.action .menu.active{
+    visibility: visible;
+    opacity: 1;
+    width: 60px;
+}
+.action .menu::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 28px;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(166, 162, 170);
+    transform: rotate(45deg);
+}
+
+.action .menu ul li{
+    list-style: none;
+    padding: 10px 0;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.action .menu ul li a{
+    text-decoration: none;
+    display: inline-block;
+    color: #555;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.action .menu ul li a:hover{
+    color: #e7deec;
+}
+

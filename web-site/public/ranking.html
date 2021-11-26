@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/ranking.css">
+    <link rel="stylesheet" href="./css/tela_do_usuario.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking</title>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="sidebar">
+            <div class="logo-details">
+              <i></i>
+                <div class="logo_name">DevMob</div>
+                <i class='bx bx-menu' id="btn" ></i>
+            </div>
+            <ul class="nav-list">
+              <!-- <li>
+                  <i class='bx bx-search' ></i>
+                 <input type="text" placeholder="Search...">
+                 <span class="tooltip">Pesquisa</span>
+              </li> -->
+              <li>
+                <a href="#" onclick="apc_notificacoes()">
+                  <i class='bx bx-chat' ></i>
+                  <span class="links_name">Notificações</span>
+                </a>
+                <span class="tooltip">Notificações</span>
+              </li>
+              <li>
+                <a href="#" onclick="dashboard()">
+                  <i class='bx bx-grid-alt'></i>
+                  <span class="links_name">Dashboard</span>
+                </a>
+                 <span class="tooltip">Dashboard</span>
+              </li>
+              <li>
+               <a href="#">
+                 <i class='bx bx-user' ></i>
+                 <span class="links_name">Usuário</span>
+               </a>
+               <span class="tooltip">Usuário</span>
+             </li>
+             <!-- <li>
+               <a href="#">
+                 <i class='bx bx-folder' ></i>
+                 <span class="links_name">Arquivos</span>
+               </a>
+               <span class="tooltip">Arquivos</span>
+             </li> -->
+             <li>
+               <a href="#" onclick="apc_loja()">
+                 <i class='bx bx-cart-alt' ></i>
+                 <span class="links_name">Loja</span>
+               </a>
+               <span class="tooltip">Loja</span>
+             </li>
+             <li>
+               <a href="#">
+                 <i class='bx bx-cog' ></i>
+                 <span class="links_name">Configurações</span>
+               </a>
+               <span class="tooltip">Configurações</span>
+             </li>
+             <li class="profile">
+                 <div class="profile-details">
+                   <div class="imageContainer">
+                      <img src="./img/png-transparent-drawing-graphy-camera-camera-text-rectangle-photography-thumbnail-removebg-preview.png" alt="Selecione uma imagem" id="imgPhoto">
+                   </div>
+                   <input type="file" id="flImage" name="flImage" accept="image/*">
+                   <div class="name_job">
+                     <div class="name">Vinícius Pieroni</div>
+                     <div class="job">Quality Assurance</div>
+                   </div>
+                 </div>
+                 <a href="login.html"><i class='bx bx-log-out' id="log_out" ></i></a>
+             </li>
+            </ul>
+          </div>
+          <!-- Inicio do html da loja -->
+          <div class="container_user" id="loja" style="display: none;">
+            
+           
+           
+            <div class="Wallet">
+                <i class='bx bx-wallet' onclick="carteira()" id="Wa"style="display: block;"></i>
+                <i class='bx bx-x'onclick="carteiraf()" id="Wf"style="display: none;"></i>
+            </div>  
+            <div class="carteira_aberta" id="Aberta" style="display: none;">
+              <h4>usuario: ????</h4>
+              <h4>Saldo de coins: ????</h4>
+            </div>
+           
+    
+    
+                <div class="buttons">
+                  <a class="button " href="#" onclick="cupons()">Cupons</a>
+              <a class="button two"href="#" onclick="perifericos()">Periféricos</a>
+            </div>
+      
+            <div id="cat_perifericos" class="cat_perifericos">
+              <section class="section1">
+                <div class="container_loja">
+                  <div class="card_loja">
+                    <div class="imgBox_loja">
+                      <img src="./img/d4f35be85eaa1cf6102a237bf46a0551-removebg-preview.png" alt="" />
+                      <h4>Caneca programador md2</h4>
+                      <sPAn class="coins">COINS: 310</sPAn>
+                    </div>
+                    <div class="content_loja">
+                     
+                      <a href="#">Adquirir</a>
+                    </div>
+                  </div>
+          
+                  <div class="card_loja">
+                    <div class="imgBox_loja">
+                      <img src="./img/3309111_0-removebg-preview.png" alt="" />
+                      <h4>Camisa Universo </h4>
+                      <sPAn class="coins">COINS: 390</sPAn>
+                    </div>
+                    <div class="content_loja">
+                      <div class="size_loja">
+                        <h3>Size:</h3>
+                        <span>PP</span>
+                        <span>P</span>
+                        <span>M</span>
+                        <span>G</span>
+                        <span>GG</span>
+                      </div>
+                      <a href="#">Adquirir</a>
+                    </div>
+                  </div>
+          
+                  <div class="card_loja">
+                    <div class="imgBox_loja">
+                      <img src="./img/caneca-debugar-min-1-removebg-preview.png" alt="" />
+                      <h4>Caneca Programador md1</h4>
+                      <sPAn class="coins">COINS: 360</sPAn>
+          
+                    </div>
+                    <div class="content_loja">
+                     
+                      <a href="#">Adquirir</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="section2">
+                <div class="container_loja">
+                  <div class="card_loja">
+                    <div class="imgBox_loja">
+                      <img src="./img/funny-t-shirt-it-works-on-my-machine-javascript-removebg-preview.png" alt="" />
+                      <h4>Camisa It Works</h4>
+                      <sPAn class="coins">COINS: 450</sPAn>
+                    </div>
+                    <div class="content_loja">
+                      <div class="size_loja">
+                        <h3>Size:</h3>
+                        <span>PP</span>
+                        <span>P</span>
+                        <span>M</span>
+                        <span>G</span>
+                        <span>GG</span>
+                      </div>
+                      <a href="#">Adquirir</a>
+                    </div>
+                  </div>
+          
+                  <div class="card_loja">
+                    <div class="imgBox_loja">
+                      <img src="./img/NQQ-0357-026_zoom1-removebg-preview.png" alt="" />
+                      <h4>Mochila Adidas</h4>
+                      <sPAn class="coins">COINS: 1320</sPAn>
+                    </div>
+                    <div class="content_loja">
+                      
+                      <a href="#">Adquirir</a>
+                    </div>
+                  </div>
+          
+                  <div class="card_loja">
+                    <div class="imgBox_loja">
+                      <img src="./img/images__4_-removebg-preview.png" alt="" />
+                      <h4>Mouse</h4>
+                      <span class="coins_mouse">COINS: 920</span>
+                    </div>
+                    <div class="content_loja">
+                     
+                      <a href="#">Adquirir</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+    
+            <div id="cat_cupons" class="cat_cupons">
+              <section class="section1">
+                <div class="container_loja">
+                  <div class="card_loja">
+                    <div class="imgBox_loja2">
+                      <img src="./img/game17.PNG" alt="" />
+                      <h4>6 cupons + 5% de desconto</h4>
+                      <sPAn class="coins">COINS: 465</sPAn>
+                    </div>
+                    <div class="content_loja">
+                     
+                      <a href="#">Adquirir</a>
+                    </div>
+                  </div>
+          
+                  <div class="card_loja">
+                    <div class="imgBox_loja2">
+                      <img src="./img/game11.PNG" alt="" />
+                      <h4>19% de desconto</h4>
+                      <sPAn class="coins">COINS: 532</sPAn>
+                    </div>
+                    <div class="content_loja">
+                      <a href="#">Adquirir</a>
+                    </div>
+                  </div>
+          
+                  <div class="card_loja">
+                    <div class="imgBox_loja2">
+                      <img src="./img/game13.PNG" alt="" />
+                      <h4>50% de desconto</h4>
+                      <sPAn class="coins">COINS: 666</sPAn>
+          
+                    </div>
+                    <div class="content_loja">
+                     
+                      <a href="#">Adquirir</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="section2">
+                <div class="container_loja">
+                  <div class="card_loja">
+                    <div class="imgBox_loja2">
+                      <img src="./img/game14.PNG" alt="" />
+                      <h4>25% de desconto</h4>
+                      <sPAn class="coins">COINS: 720</sPAn>
+                    </div>
+                    <div class="content_loja">
+                      <a href="#">Adquirir</a>
+                    </div>
+                  </div>
+          
+                  <div class="card_loja">
+                    <div class="imgBox_loja2">
+                      <img src="./img/game15.PNG" alt="" />
+                      <h4>15% de desconto com Alura</h4>
+                      <sPAn class="coins">COINS: 765</sPAn>
+                    </div>
+                    <div class="content_loja">
+                      <a href="#">Adquirir</a>
+                    </div>
+                  </div>
+          
+                  <div class="card_loja">
+                    <div class="imgBox_loja2">
+                      <img src="./img/game16.PNG" alt="" />
+                      <h4>40 cupons + 4% de desconto</h4>
+                      <span class="coins_desc">COINS: 1125</span>
+                    </div>
+                    <div class="content_loja">
+                      <a href="#">Adquirir</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+        </div>
+        
+
+        <div class="box_orientacao">
+            <div class="orientacao_campos_posicao">Posição</div>
+            <div class="orientacao_campos">Supervisor</div>
+            <div class="orientacao_campos">Pontuação</div>
+            <div class="orientacao_campos">Colaborador</div>
+        </div>
+
+        <div class="ranking">
+            <div class="usuarios">
+                <div class="column_position">77</div>
+                <div class="column_gestor">123456789123456789</div>
+                <div class="column_pontuacao">19 pts</div>
+                <div class="column_colaborador">Lucas Pereira da Silva</div>
+            </div>
+
+            <div class="usuarios">
+              <div class="column_position">77</div>
+              <div class="column_gestor">123456789123456789</div>
+              <div class="column_pontuacao">19 pts</div>
+              <div class="column_colaborador">Lucas Pereira da Silva</div>
+            </div>
+
+            <div class="usuarios">
+              <div class="column_position">77</div>
+              <div class="column_gestor">123456789123456789</div>
+              <div class="column_pontuacao">19 pts</div>
+              <div class="column_colaborador">Lucas Pereira da Silva</div>
+            </div>
+
+              <div class="usuarios">
+                <div class="column_position">77</div>
+                <div class="column_gestor">123456789123456789</div>
+                <div class="column_pontuacao">19 pts</div>
+                <div class="column_colaborador">Lucas Pereira da Silva</div>
+              </div>
+
+            <div class="usuarios">
+              <div class="column_position">11</div>
+              <div class="column_gestor">Alexandre Carmos</div>
+              <div class="column_pontuacao">110 pts</div>
+              <div class="column_colaborador"></div>
+            </div>
+
+            <div class="usuarios">
+              <div class="column_position">77</div>
+              <div class="column_gestor">123456789123456789</div>
+              <div class="column_pontuacao">19 pts</div>
+              <div class="column_colaborador">Lucas Pereira da Silva Pacheco</div>
+            </div>
+
+            <div class="usuarios">
+              <div class="column_position">77</div>
+              <div class="column_gestor">123456789123456789</div>
+              <div class="column_pontuacao">19 pts</div>
+              <div class="column_colaborador">Lucas Pereira da Silva</div>
+            </div>
+
+            <div class="usuarios">
+              <div class="column_position">77</div>
+              <div class="column_gestor">123456789123456789</div>
+              <div class="column_pontuacao">19 pts</div>
+              <div class="column_colaborador">Lucas Pereira da Silva</div>
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

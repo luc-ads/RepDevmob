@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="./img/DevMob.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/tela_do_usuario.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/home_manager.css">
+    <script type="text/javascript" src="./js/funcoesCompany.js"></script>
+    <title>Devmob</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i></i>
+            <div class="logo_name">DevMob</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <!-- <li>
+                  <i class='bx bx-search' ></i>
+                 <input type="text" placeholder="Search...">
+                 <span class="tooltip">Pesquisa</span>
+              </li> -->
+            <li>
+                <a href="#" onclick="apc_notificacoes()">
+                    <i class='bx bx-chat'></i>
+                    <span class="links_name">Notificações</span>
+                </a>
+                <span class="tooltip">Notificações</span>
+            </li>
+            <li>
+                <a href="#" onclick="dashboard()">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-user'></i>
+                    <span class="links_name">Usuário</span>
+                </a>
+                <span class="tooltip">Usuário</span>
+            </li>
+            <!-- <li>
+               <a href="#">
+                 <i class='bx bx-folder' ></i>
+                 <span class="links_name">Arquivos</span>
+               </a>
+               <span class="tooltip">Arquivos</span>
+             </li> -->
+            <li>
+                <a href="#" onclick="apc_loja()">
+                    <i class='bx bx-cart-alt'></i>
+                    <span class="links_name">Loja</span>
+                </a>
+                <span class="tooltip">Loja</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog'></i>
+                    <span class="links_name">Configurações</span>
+                </a>
+                <span class="tooltip">Configurações</span>
+            </li>
+            <li class="profile">
+                <div class="profile-details">
+                    <div class="imageContainer">
+                        <img src="./img/png-transparent-drawing-graphy-camera-camera-text-rectangle-photography-thumbnail-removebg-preview.png"
+                            alt="Selecione uma imagem" id="imgPhoto">
+                    </div>
+                    <input type="file" id="flImage" name="flImage" accept="image/*">
+                    <div class="name_job">
+                        <div class="name">Vinícius Pieroni</div>
+                        <div class="job">Quality Assurance</div>
+                    </div>
+                </div>
+                <a onclick="finalizar_sessao()" style="cursor: pointer;"><i class='bx bx-log-out' id="log_out"></i></a>
+            </li>
+        </ul>
+    </div>
+    <div class="divroxa"></div>
+    <div class="container">
+        <div class="header">
+            <h1>Tabela dos Funcionário</h1>
+            <div></div>
+            <input type="" placeholder="Search">
+            <div class="perfil"><img src="img//avatar.webp" alt=""><span>Gerson Santos</span></div>
+        </div>
+        <div class="centro">
+            <div class="title">
+                <div>NOME</div>
+                <div>Máquina</div>
+                <div>Status</div>
+                <div>Ram</div>
+                <div>Desempenho</div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+<script>
+    // verificar_autenticacao()
+
+    let sidebar = document.querySelector(".sidebar");
+    let closeBtn = document.querySelector("#btn");
+    let searchBtn = document.querySelector(".bx-search");
+
+    closeBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+        menuBtnChange();//chamando a função (opcional)
+    });
+
+    searchBtn.addEventListener("click", () => { // Barra lateral aberta quando você clica no iocn de pesquisa
+        sidebar.classList.toggle("open");
+        menuBtnChange(); //chamando a função (opcional)
+    });
+
+    // a seguir estão o código para alterar o botão da barra lateral (opcional)
+    function menuBtnChange() {
+        if (sidebar.classList.contains("open")) {
+            closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//substituindo o icones classe 
+        } else {
+            closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");//substituindo o icones classe 
+        }
+    }
+</script>
+<script>
+
+
+
+</script>

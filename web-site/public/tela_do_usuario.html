@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/tela_do_usuario.css">
+    <link rel="stylesheet" href="./css/dashboard_usuario.css">
+    <link rel="stylesheet" href="./css/novaLoja.css">
+    <link rel="stylesheet" href="./css/buttom.css">
+    <link rel="stylesheet" href="./css/perfil_funcionario.css">
+    <link rel="stylesheet" href="./css/home_funcionario.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/loja.css">
+    <link rel="shortcut icon" href="./img/DevMob.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+    <title>DevMob</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+          <i></i>
+            <div class="logo_name">DevMob</div>
+            <i class='bx bx-menu' id="btn" ></i>
+        </div>
+        <ul class="nav-list">
+          <!-- <li>
+              <i class='bx bx-search' ></i>
+             <input type="text" placeholder="Search...">
+             <span class="tooltip">Pesquisa</span>
+          </li> -->
+          <li>
+            <a href="#" onclick="apc_notificacoes()">
+              <i class='bx bx-chat' ></i>
+              <span class="links_name">Notificações</span>
+            </a>
+            <span class="tooltip">Notificações</span>
+          </li>
+          <li>
+            <a href="#" onclick="dashboard()">
+              <i class='bx bx-grid-alt'></i>
+              <span class="links_name">Dashboard</span>
+            </a>
+             <span class="tooltip">Dashboard</span>
+          </li>
+          <li>
+           <a href="#">
+             <i class='bx bx-user' ></i>
+             <span class="links_name">Usuário</span>
+           </a>
+           <span class="tooltip">Usuário</span>
+         </li>
+         <!-- <li>
+           <a href="#">
+             <i class='bx bx-folder' ></i>
+             <span class="links_name">Arquivos</span>
+           </a>
+           <span class="tooltip">Arquivos</span>
+         </li> -->
+         <li>
+           <a href="#" onclick="apc_loja()">
+             <i class='bx bx-cart-alt' ></i>
+             <span class="links_name">Loja</span>
+           </a>
+           <span class="tooltip">Loja</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-cog' ></i>
+             <span class="links_name">Configurações</span>
+           </a>
+           <span class="tooltip">Configurações</span>
+         </li>
+         <li class="profile">
+             <div class="profile-details">
+               <div class="imageContainer">
+                  <img src="./img/png-transparent-drawing-graphy-camera-camera-text-rectangle-photography-thumbnail-removebg-preview.png" alt="Selecione uma imagem" id="imgPhoto">
+               </div>
+               <input type="file" id="flImage" name="flImage" accept="image/*">
+               <div class="name_job">
+                 <div class="name">Vinícius Pieroni</div>
+                 <div class="job">Quality Assurance</div>
+               </div>
+             </div>
+             <a href="login.html"><i class='bx bx-log-out' id="log_out" ></i></a>
+         </li>
+        </ul>
+      </div>
+      <!-- Inicio do html da loja -->
+      <div class="container_user" id="loja" style="display: none;">
+        
+       
+       
+        <div class="Wallet">
+            <i class='bx bx-wallet' onclick="carteira()" id="Wa"style="display: block;"></i>
+            <i class='bx bx-x'onclick="carteiraf()" id="Wf"style="display: none;"></i>
+        </div>  
+        <div class="carteira_aberta" id="Aberta" style="display: none;">
+          <h4>usuario: ????</h4>
+          <h4>Saldo de coins: ????</h4>
+        </div>
+       
+
+
+            <div class="buttons">
+              <a class="button " href="#" onclick="cupons()">Cupons</a>
+          <a class="button two"href="#" onclick="perifericos()">Periféricos</a>
+        </div>
+  
+        <div id="cat_perifericos" class="cat_perifericos">
+          <section class="section1">
+            <div class="container_loja">
+              <div class="card_loja">
+                <div class="imgBox_loja">
+                  <img src="./img/d4f35be85eaa1cf6102a237bf46a0551-removebg-preview.png" alt="" />
+                  <h4>Caneca programador md2</h4>
+                  <sPAn class="coins">COINS: 310</sPAn>
+                </div>
+                <div class="content_loja">
+                 
+                  <a href="#">Adquirir</a>
+                </div>
+              </div>
+      
+              <div class="card_loja">
+                <div class="imgBox_loja">
+                  <img src="./img/3309111_0-removebg-preview.png" alt="" />
+                  <h4>Camisa Universo </h4>
+                  <sPAn class="coins">COINS: 390</sPAn>
+                </div>
+                <div class="content_loja">
+                  <div class="size_loja">
+                    <h3>Size:</h3>
+                    <span>PP</span>
+                    <span>P</span>
+                    <span>M</span>
+                    <span>G</span>
+                    <span>GG</span>
+                  </div>
+                  <a href="#">Adquirir</a>
+                </div>
+              </div>
+      
+              <div class="card_loja">
+                <div class="imgBox_loja">
+                  <img src="./img/caneca-debugar-min-1-removebg-preview.png" alt="" />
+                  <h4>Caneca Programador md1</h4>
+                  <sPAn class="coins">COINS: 360</sPAn>
+      
+                </div>
+                <div class="content_loja">
+                 
+                  <a href="#">Adquirir</a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section2">
+            <div class="container_loja">
+              <div class="card_loja">
+                <div class="imgBox_loja">
+                  <img src="./img/funny-t-shirt-it-works-on-my-machine-javascript-removebg-preview.png" alt="" />
+                  <h4>Camisa It Works</h4>
+                  <sPAn class="coins">COINS: 450</sPAn>
+                </div>
+                <div class="content_loja">
+                  <div class="size_loja">
+                    <h3>Size:</h3>
+                    <span>PP</span>
+                    <span>P</span>
+                    <span>M</span>
+                    <span>G</span>
+                    <span>GG</span>
+                  </div>
+                  <a href="#">Adquirir</a>
+                </div>
+              </div>
+      
+              <div class="card_loja">
+                <div class="imgBox_loja">
+                  <img src="./img/NQQ-0357-026_zoom1-removebg-preview.png" alt="" />
+                  <h4>Mochila Adidas</h4>
+                  <sPAn class="coins">COINS: 1320</sPAn>
+                </div>
+                <div class="content_loja">
+                  
+                  <a href="#">Adquirir</a>
+                </div>
+              </div>
+      
+              <div class="card_loja">
+                <div class="imgBox_loja">
+                  <img src="./img/images__4_-removebg-preview.png" alt="" />
+                  <h4>Mouse</h4>
+                  <span class="coins_mouse">COINS: 920</span>
+                </div>
+                <div class="content_loja">
+                 
+                  <a href="#">Adquirir</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div id="cat_cupons" class="cat_cupons">
+          <section class="section1">
+            <div class="container_loja">
+              <div class="card_loja">
+                <div class="imgBox_loja2">
+                  <img src="./img/game17.PNG" alt="" />
+                  <h4>6 cupons + 5% de desconto</h4>
+                  <sPAn class="coins">COINS: 465</sPAn>
+                </div>
+                <div class="content_loja">
+                 
+                  <a href="#">Adquirir</a>
+                </div>
+              </div>
+      
+              <div class="card_loja">
+                <div class="imgBox_loja2">
+                  <img src="./img/game11.PNG" alt="" />
+                  <h4>19% de desconto</h4>
+                  <sPAn class="coins">COINS: 532</sPAn>
+                </div>
+                <div class="content_loja">
+                  <a href="#">Adquirir</a>
+                </div>
+              </div>
+      
+              <div class="card_loja">
+                <div class="imgBox_loja2">
+                  <img src="./img/game13.PNG" alt="" />
+                  <h4>50% de desconto</h4>
+                  <sPAn class="coins">COINS: 666</sPAn>
+      
+                </div>
+                <div class="content_loja">
+                 
+                  <a href="#">Adquirir</a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section2">
+            <div class="container_loja">
+              <div class="card_loja">
+                <div class="imgBox_loja2">
+                  <img src="./img/game14.PNG" alt="" />
+                  <h4>25% de desconto</h4>
+                  <sPAn class="coins">COINS: 720</sPAn>
+                </div>
+                <div class="content_loja">
+                  <a href="#">Adquirir</a>
+                </div>
+              </div>
+      
+              <div class="card_loja">
+                <div class="imgBox_loja2">
+                  <img src="./img/game15.PNG" alt="" />
+                  <h4>15% de desconto com Alura</h4>
+                  <sPAn class="coins">COINS: 765</sPAn>
+                </div>
+                <div class="content_loja">
+                  <a href="#">Adquirir</a>
+                </div>
+              </div>
+      
+              <div class="card_loja">
+                <div class="imgBox_loja2">
+                  <img src="./img/game16.PNG" alt="" />
+                  <h4>40 cupons + 4% de desconto</h4>
+                  <span class="coins_desc">COINS: 1125</span>
+                </div>
+                <div class="content_loja">
+                  <a href="#">Adquirir</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+    </div>
+    <!-- Fim do html da loja -->
+    <!-- Inicio das Notificações -->
+    <div id="notificacao" class="cx-alert">
+      <div class="row">
+
+          <div class="percnt-cpu">
+              <h1>Uso do <span class="purple">Processador</span></h1>
+              <br>
+              <h2>Percentual de uso: 20%</h2>
+              <br>
+              <h2>Estado: <span class="estado-cpu">Bom</span></h2>
+          </div>
+
+          <div class="temp-cpu">
+              <h1><span class="purple">Temperatura</span> do Processador</h1>
+              <br>
+              <h2>Temperatura atual: 50°C</h2>
+              <br>
+              <h2>Estado: <span class="estado-cpu">Bom</span></h2>
+          </div>
+
+      </div>
+
+      <div class="row">
+
+          <div class="percnt-ram">
+              <h1>Uso da Memória <span class="purple">RAM</span></h1>
+              <br>
+              <h2>Percentual de uso: 70%</h2>
+              <br>
+              <h2>Estado: <span class="estado-ram">Emergencial</span></h2>
+          </div>
+
+          <div class="percnt-disk">
+              <h1>Uso do <span class="purple">Disco</span> Rígido</h1>
+              <br>
+              <h2>Percentual de uso: 95%</h2>
+              <br>
+              <h2>Estado: <span class="estado-disk">Crítico</span></h2>
+          </div>
+
+      </div>
+
+  </div>
+    <!-- Fim das Notificações -->
+</body>
+</html>
+<!-- Inicio do script da barra lateral -->
+<script>
+    let sidebar = document.querySelector(".sidebar");
+    let closeBtn = document.querySelector("#btn");
+    let searchBtn = document.querySelector(".bx-search");
+  
+    closeBtn.addEventListener("click", ()=>{
+      sidebar.classList.toggle("open");
+      menuBtnChange();//chamando a função (opcional)
+    });
+  
+    searchBtn.addEventListener("click", ()=>{ // Barra lateral aberta quando você clica no iocn de pesquisa
+      sidebar.classList.toggle("open");
+      menuBtnChange(); //chamando a função (opcional)
+    });
+  
+    // a seguir estão o código para alterar o botão da barra lateral (opcional)
+    function menuBtnChange() {
+     if(sidebar.classList.contains("open")){
+       closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//substituindo o icones classe 
+     }else {
+       closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//substituindo o icones classe 
+     }
+    }
+    </script>
+
+<!-- Fim do script da barra lateral -->
+<!-- Inicio do script da loja -->
+    
+
+<script type="text/javascript" src="./js/script_loja.js"></script>
+
+<script>
+  // Ripple Effect JavaScript Code
+  let buttons = document.querySelectorAll(".button");
+
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", (e)=>{
+      e.preventDefault(); // preventing form submitting
+
+      let overlay = document.createElement('span'); //creating a tag(span)
+      overlay.classList.add("overlay"); //adding a class inside the span
+      e.target.appendChild(overlay); //adding overlay tag inside the anchor tag at in HTML
+
+      let xValue = e.clientX - e.target.offsetLeft; //by this we get perfect value where we will click
+      let yValue = e.clientY - e.target.offsetTop; //by this we get perfect value where we will click
+
+       overlay.style.left = xValue + "px"; //changing the position of the overlay according to our clicks on the button
+       overlay.style.top = yValue + "px"; //changing the position of the overlay according to our clicks on the button
+  });
+  }
+  </script>
+
+<script>
+  let circle = document.querySelector(".color-option");
+
+  circle.addEventListener("click", (e)=>{
+    let target = e.target;
+    if(target.classList.contains("circle")){
+      circle.querySelector(".active").classList.remove("active");
+      target.classList.add("active");
+      document.querySelector(".main-images .active").classList.remove("active");
+      document.querySelector(`.main-images .${target.id}`).classList.add("active");
+    }
+  });
+
+ </script>
+
+<!-- Fim do script da loja -->
+<!-- Inicio do script das notificaçoes -->
+<script>
+  function menu() {
+      const menuToggle = document.querySelector('.menu');
+      menuToggle.classList.toggle('active')
+  }
+</script>
+<!-- Fim do script das notificaçoes -->
+
+<!-- Foto do usuario -->
+<script src="./js/script_photo_User.js"></script>
+<!-- carteira do usuario -->
+<script>
+  function carteira(){
+    Aberta.style.display = 'block';
+    Wa.style.display = 'none';
+    Wf.style.display = 'block';
+  }
+  function carteiraf(){
+      Aberta.style.display = 'none';
+      Wa.style.display = 'block';
+    Wf.style.display = 'none';
+    }
+
+</script>

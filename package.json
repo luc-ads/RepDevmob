@@ -1,0 +1,9 @@
+{
+  "name": "devmob",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./web-site/bin/www",
+    "postinstall": "cd web-site && npm install"
+  }
+}

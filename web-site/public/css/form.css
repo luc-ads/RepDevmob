@@ -1,0 +1,85 @@
+body,
+html {
+    background: linear-gradient(#c64191, #752158);
+    background-repeat: no-repeat;
+}
+
+.cabecalho {
+    height: 13%;
+}
+
+.content {
+    max-height: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    border-radius: 5px;
+    padding: 10px 30px;
+    background: #FFF;
+    width: 25%;
+    max-height: 100%;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    margin-bottom: 10px;
+}
+
+.row label {
+    text-align: center;
+    font-size: 1vw;
+}
+
+.row input {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #c64191;
+    outline: 0;
+    font-size: 1vw;
+    color: #752158;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+form p {
+    text-align: center;
+    font-size: 0.9vw;
+}
+
+form a {
+    text-decoration: none;
+    color: #2e6eb9;
+}
+
+form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2vw;
+}
+
+.btn {
+    color: #FFF;
+    background: linear-gradient(to left, #23001e, #752158);
+    border: 0;
+    font-size: 1.2vw;
+    padding: 0.5vw 2.5vw;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #23001e, #752158);
+    letter-spacing: 0.5px;
+}

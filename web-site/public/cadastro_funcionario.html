@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/cadastro_funcionario.css">
+    <link rel="shortcut icon" href="./img/DevMob.png" type="image/x-icon">
+    <script type="text/javascript" src="./js/funcoesCompany.js"></script>
+    <title>Devmob</title>
+</head>
+
+<body>
+    <img  class="logo" src="./img/DevMob.png" onclick="finalizar_sessao()" style="cursor: pointer;">
+    <div class="container">
+        <div class="header">
+            <h1>Novo Funcionário</h1>
+        </div>
+        <div class="cx_cadastro">
+            <form id="form_cadastro" method="post">
+                <div> <span>Nome Funcionario</span>
+                    <input type="text" class="ipt1" name="name" id="inp_nome" class="email" placeholder="Insira o nome">
+                </div><br>
+                <div> <span> Celular </span>
+                    <input type="text" class="ipt1" name="user_phone_number" id="inp_phone_number"
+                        placeholder="Insira o Telefone">
+                </div><br>
+                <div> <span> E-mail Funcionario</span>
+                    <input type="text" class="ipt1" name="email" id="inp_email" placeholder="Insira o e-mail">
+                </div><br>
+                <div> <span> Senha Funcionario</span>
+                    <input type="password" class="ipt3" name="password" id="inp_senha" placeholder="Insira a Senha">
+                    <span>Conf. Senha</span>
+                    <input class="ipt3" id="inp_senha1" placeholder="Insira a Senha">
+                </div><br>
+                <div><span> Indent. da Empresa</span>
+                    <input type="text" class="ipt2" name="fk_company" id="fk_company" maxlength="5"
+                        placeholder="Insira a indentificação">
+                    <span> Indent. Gestor</span>
+                    <input type="text" class="ipt2" name="fk_manager" id="fk_manager" maxlength="5"
+                        placeholder="Insira a indentificação">
+                </div><br>
+                <div class="linha"></div>
+                <br>
+            </form>
+            <div>
+                <div><input type="checkbox" id="sc" value="on"> <span>Salva e Continuar</span></div>
+                <div>
+                <button class="btn" onclick="voltar()" style="cursor: pointer;"><img src="img//voltar.png" alt=""> <span>Voltar</span></button>
+                <div style="width: 5vw;"></div>
+                <button class="btn" id="btn_entrar" onclick="cadastrar()" style="cursor: pointer;"><img src="img//salva.png" style="width: 16%;" alt=""> <span>Salvar</span></button>
+                </div>
+            </div>
+            <div id="sIn" style="display: none;">
+                <center>
+                    Confirmação de senha incorreta
+                </center>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    verificar_autenticacao()
+
+    function cadastrar() {
+
+        if (inp_senha.value == inp_senha1.value) {
+            var formulario = new URLSearchParams(new FormData(form_cadastro));
+            fetch("/usuarios/register", {
+                method: "POST",
+                body: formulario
+            }).then(function (response) {
+
+                if (response.ok) {
+                    var check = document.getElementById("sc");
+                    if (check.checked) {
+                        window.location.href = `cadastro_funcionario.html`;
+                    } else {
+                        window.location.href = 'home_manager.html';
+                    }
+
+                } else {
+
+                    console.log('Erro de cadastro!');
+                    response.text().then(function (resposta) {
+                        div_erro.innerHTML = resposta;
+                    });
+                }
+            });
+
+            return false;
+        } else {
+            sIn.style.display = 'block';
+        }
+    }
+    function voltar() {
+        window.location.href = `home_manager.html`;
+    }
+</script>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devmob</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/home_funcionario.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="shortcut icon" href="./img/DevMob.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+    <script src="./js/funcoesUser.js"></script>
+</head>
+
+<body onload="getEquipment()">
+
+    <!--
+    <header>
+        <div class="container">
+            <div class=" logo">
+                <a href="index.html">
+                    <img src="./img/DevMob.png" alt="Logo DEVMOB">
+                </a>
+            </div>
+        </div>
+
+        <div class="action">
+
+            <div class="profile" onclick="menu()">
+                <img src="https://p1.pxfuel.com/preview/824/273/246/portrait-man-black-and-white-adult-person-beard.jpg"
+                    alt="Foto do usuário" class="photo-user">
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="">Perfil</a></li>
+                    <li><a href="">Ranking</a></li>
+                    <li><a href="loja.html">Loja</a></li>
+                    <li><a href="">Sair</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </header>
+    -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./img/DevMob.png" alt="Logo DEVMOB">
+                </a>
+            </div>
+
+            <nav class="conteudo">
+                <ul>
+                    <li><a href="perfil_funcionario.html">HOME</a></li>
+                    <li><a href="dash_cpu.html">DASHBOARD</a></li>
+                    <li><a href="loja.html">LOJA</a></li>
+                    <li><a onclick="finalizar_sessao()">SAIR</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <div class="cx-alert">
+        <div class="row">
+
+            <div class="percnt-cpu">
+                <h1>Uso do <span class="purple">Processador</span></h1>
+                <br>
+                <h2>Percentual de uso: 20%</h2>
+                <br>
+                <h2>Estado: <span class="estado-cpu">Bom</span></h2>
+            </div>
+
+            <div class="temp-cpu">
+                <h1><span class="purple">Temperatura</span> do Processador</h1>
+                <br>
+                <h2>Temperatura atual: 50°C</h2>
+                <br>
+                <h2>Estado: <span class="estado-cpu">Bom</span></h2>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="percnt-ram">
+                <h1>Uso da Memória <span class="purple">RAM</span></h1>
+                <br>
+                <h2>Percentual de uso: 70%</h2>
+                <br>
+                <h2>Estado: <span class="estado-ram">Emergencial</span></h2>
+            </div>
+
+            <div class="percnt-disk">
+                <h1>Uso do <span class="purple">Disco</span> Rígido</h1>
+                <br>
+                <h2>Percentual de uso: 95%</h2>
+                <br>
+                <h2>Estado: <span class="estado-disk">Crítico</span></h2>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    verificar_autenticacao()
+
+    var idUser = sessionStorage.getItem('id_user_meuapp');
+
+    function menu() {
+        const menuToggle = document.querySelector('.menu');
+        menuToggle.classList.toggle('active')
+    }
+
+    function getEquipment() {
+        fetch(`/equipment/${idUser}`
+        ).then(resposta => {
+            resposta.json().then(json => {
+                sessionStorage.id_equipment = json.id_equipment;
+                sessionStorage.operational_system = json.operational_system;
+                sessionStorage.manufacturer = json.manufacturer;
+                sessionStorage.architecture = json.architecture;
+                sessionStorage.equipment_ram = json.equipment_ram;
+                sessionStorage.equipment_hd = json.equipment_hd;
+                sessionStorage.name_processor = json.name_processor;
+                sessionStorage.physical_cpus = json.physical_cpus;
+                sessionStorage.logical_cpus = json.logical_cpus;
+            });
+        });
+    }
+</script>

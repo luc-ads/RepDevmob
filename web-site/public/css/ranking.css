@@ -1,0 +1,119 @@
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.ranking {
+    background-color: none;
+    margin: 0 1.1vw;
+    max-height: 38vw;
+    width: 65%;
+    float: right;
+    border: solid #23001E 2px;
+    border-radius: 0 0 5px 5px;
+    overflow-y:auto; 
+}
+
+
+
+.dados_ranking {
+    display: flex;
+    font-size: 1.7vw;
+    width: 30%;
+}
+
+.box_orientacao {
+    margin: 1.1vw 1.1vw 0 1.1vw;
+    background-color: #23001E;
+    display: inline-flex;
+    height: 5vw;
+    width: 65%;
+    float: right;
+    border-radius: 5px 5px 0 0;
+    align-items: center;
+}
+
+.usuarios {
+    display: flex;
+    margin: 1.5% 1% 0 1%;
+    border-radius: 5px;
+    background-color: rgb(228, 186, 247);
+
+}
+
+.orientacao_campos {
+    color: antiquewhite;
+    font-size: 1.7vw;
+    margin-left: 5.8vw;
+}
+
+.orientacao_campos_posicao {
+    color: antiquewhite;
+    font-size: 1.7vw;
+    margin-left: 2.8vw;
+}
+
+.column_position {
+    font-size: 1.7vw;
+    display: flex;
+    height: 5vw;
+    white-space: nowrap; 
+    max-width: 12em; 
+    overflow: hidden;
+    text-overflow: clip; 
+    min-width: 15%;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1vw;
+
+}
+
+.column_gestor {
+    font-size: 1.7vw;
+    display: flex;
+    height: 5vw;
+    white-space: nowrap; 
+    max-width: 8em; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    min-width: 22%;
+    align-items: center;
+    justify-content: left;
+    margin-left: 2vw;
+    
+
+}
+
+.column_pontuacao {
+    font-size: 1.7vw;
+    display: flex;
+    height: 5vw;
+    white-space: nowrap; 
+    max-width: 8em; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    min-width: 10%;
+    align-items: center;
+    justify-content: left;
+    margin-left: 5vw;
+    
+
+}
+
+.column_colaborador {
+    font-size: 1.7vw;
+    display: flex;
+    height: 5vw;
+    white-space: nowrap; 
+    max-width: 12em; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    min-width: 10%;
+    align-items: center;
+    justify-content: left;
+    margin-left: 4vw;
+    
+
+}

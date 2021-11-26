@@ -1,0 +1,179 @@
+* {
+    font-family: Raleway;
+}
+
+body {
+   /* background-color: ; */
+  background-color: #ccc;
+}
+.info{
+    background-color: #752158;
+    width: 100%;
+    height: 52vh;
+}
+.info h1{
+    position: absolute;
+    top: 2%;
+    left: 13%;
+    font-size: 5vh;
+    COLOR: rgb(54, 47, 47);
+}
+.container{
+    max-width: 100%;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    
+}
+.container-cards{
+    position: absolute;
+    top: 9%;
+    left: 13%;
+}
+.card_info{
+    background-color: #fff;
+    width: 40vh;
+    height: 20vh;
+    margin-right: 4vh;
+    border-radius: 0.5vh;
+    border:0.2vh solid rgb(46, 45, 45);
+    font-size: 5vh;
+}
+
+.card_info img {
+    width: 7%;
+    top: 28%;
+    left: 14%;
+    float: left;
+}
+
+.big_container h1{
+    margin-left: -88%;
+}
+
+.big_container{
+    width: 70vw;
+    margin-top: -13.7%;
+    text-align: center;
+    margin-left: 9%;
+}
+.big_container div{
+    width: 70%;
+    margin-top: 5%;
+}
+
+.small_container div{
+    display: flex;
+    margin: 5%;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8vw;
+    font: bold;
+    height: 11vh;
+    width: 16vw;
+   color: #23001e;
+    border-radius: 1vh;
+    box-shadow: 0 1vh 2.5vh rgb(0 0 0 / 20%);
+    backdrop-filter: blur(1.4vh);
+    border-top: 0.1vh solid rgba(255, 255, 255, 0.5);
+    border-left: 0.1vh solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+.small_container div:hover {
+    background-color: rgba(230, 225, 237, 0.582);
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.small_container h2{
+    margin-left: 15%;
+    color: rgba(230, 225, 237, 0.95);
+}
+
+.small_container p b{
+    margin-left: 12%;
+}
+
+.opt_img {
+    margin-left: 12%;
+    width: 5vw;
+}
+
+.all {
+    padding-top: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.2vw;
+    color: rgba(230, 225, 237, 0.95);
+}
+
+.all:hover {
+    color: rgb(138, 43, 226);
+    transition: 0.8s;
+    transform: scale(1.05);
+}
+
+.dash{
+    padding-top: 2vh;
+    border-radius: 0.5vh;
+    background-color: #fff;
+    border:0.2vh solid rgb(46, 45, 45);
+    width: 100%;
+    text-align: center;
+}
+div .dash h2{
+    text-align: justify;
+   padding-left: 4vh;
+    
+}
+div .myDash{
+    padding-left: 5vh;
+}
+
+button{
+    width: 10%;
+    height: 6vh;
+    background-color:#fff ;
+    color: #23001e;
+    border-radius: 0.5vh;
+    font-size: 1.8vw;
+    cursor: pointer;
+}
+
+.btn-D{
+    position: absolute;
+    top: 35%;
+    left: 30%;
+}
+.btn-S{
+    position: absolute;
+    top: 35%;
+    left: 40.5%;
+}
+.btn-M{
+    position: absolute;
+    top: 35%;
+    left: 51%;
+}
+.bar{
+    padding-top: 2vh;
+    border-radius: 0.5vh;
+    background-color: #fff;
+    border:0.2vh solid rgb(46, 45, 45);
+    width: 100%;
+    text-align: center;
+    height: 46vh;
+    
+}
+    .dash-bar{
+        position: absolute;
+        top: 32%;
+        left: 67.5%;
+    }
+    .bar .h2{
+        margin-bottom: 3vh;
+    }

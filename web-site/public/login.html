@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Devmob</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="./css/login.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="./img/DevMob.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="cont">
+    <form class="form sign-in" id="form_login2" method="post" onsubmit="return entrar2()">
+
+      <a href="index.html">
+        <img class="img_logo_back" src="./img/DevMob-cinza.png" alt="logo_devmob">
+      </a>
+
+      <h2>Login Corporativo</h2>
+
+      <label>
+        <span>Endereço de e-mail</span>
+        <input id="inp_email_corp" type="email" name="email">
+      </label>
+
+      <label>
+        <span>Senha</span>
+        <input id="inp_password_corp" type="password" name="password">
+      </label>
+
+      <button id="btn_entrar" class="submit">Entrar</button>
+      <div class="forgot-pass">
+        <a href="index.html#contact">Esqueceu a senha?</a>
+      </div>
+      <div id="div_erro2" class="msg_erro"></div>
+    </form>
+
+    <div class="sub-cont">
+      <div class="img">
+
+        <div class="img-text m-up">
+          <h2>É funcionário?</h2>
+          <p>Basta efetuar o login para ter acessa a nossa plataforma!</p>
+        </div>
+
+        <div class="img-text m-in">
+          <h2>Um de nós?</h2>
+          <p>Se você for gestor, basta entrar na página de login corporativo!</p>
+        </div>
+
+        <div class="img-btn">
+          <span class="m-up">Entrar</span>
+          <span class="m-in">Entrar</span>
+        </div>
+
+      </div>
+
+      <form class="form sign-up" id="form_login" method="post" onsubmit="return entrar()">
+
+        <a href="index.html">
+          <img class="img_logo_back" src="./img/DevMob-cinza.png" alt="logo_devmob">
+        </a>
+
+        <h2>Login Funcionário</h2>
+
+        <label>
+          <span>Endereço de e-mail </span>
+          <input id="inp_email_fun" type="email" name="email">
+        </label>
+
+        <label>
+          <span>Senha</span>
+          <input id="inp_password_fun" type="password" name="password">
+        </label>
+
+        <button id="btn_entrar2" class="submit">Entrar</button>
+        <div class="forgot-pass">
+          <a href="index.html#contact">Esqueceu a senha?</a>
+        </div>
+        <div id="div_erro" class="msg_erro"></div>
+      </form>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="./js/script_login.js"></script>
+
+</body>
+
+</html>
+<script>
+  function entrar() {
+    aguardar();
+    var formulario = new URLSearchParams(new FormData(form_login));
+    fetch("/usuarios/auth", {
+      method: "POST",
+      body: formulario
+    }).then(resposta => {
+
+      if (resposta.ok) {
+
+        resposta.json().then(json => {
+
+          sessionStorage.user_name_meuapp = json.user_name;
+          sessionStorage.user_email_meuapp = json.user_email;
+          sessionStorage.id_user_meuapp = json.id_user;
+          sessionStorage.fk_manager_meuapp = json.fk_manager;
+
+          if (json.fk_manager == 0) {
+            window.location.href = 'home_manager.html';
+          } else {
+            window.location.href = 'perfil_funcionario.html';
+          }
+        });
+
+      } else {
+
+        console.log('Erro de login!');
+
+        resposta.text().then(texto => {
+          console.error(texto);
+          finalizar_aguardar(texto);
+        });
+      }
+    });
+     
+    return false;
+  }
+
+  function entrar2() {
+    aguardar();
+    var formulario = new URLSearchParams(new FormData(form_login2));
+    fetch("/empresas/auth", {
+      method: "POST",
+      body: formulario
+    }).then(resposta => {
+
+      if (resposta.ok) {
+
+        resposta.json().then(json => {
+
+          sessionStorage.company_name_meuapp = json.company_name;
+          sessionStorage.company_email_meuapp = json.company_email;
+          sessionStorage.id_company_meuapp = json.id_company;
+
+          window.location.href = 'cadastro_funcionario.html';
+
+        });
+
+      } else {
+
+        console.log('Erro de login!');
+
+        resposta.text().then(texto => {
+          console.error(texto);
+          finalizar_aguardar(texto);
+        });
+      }
+    });
+
+    return false;
+  }
+
+  function aguardar() {
+    btn_entrar.disabled = true;
+    btn_entrar2.disabled = true;
+    // img_aguarde.style.visibility = 'visible';
+    div_erro.style.visibility = 'hidden';
+    div_erro2.style.visibility = 'hidden';
+  }
+
+  function finalizar_aguardar(resposta) {
+    btn_entrar.disabled = false;
+    btn_entrar2.disabled = false;
+    // img_aguarde.style.visibility = 'hidden';
+    div_erro.style.visibility = 'visible';
+    div_erro2.style.visibility = 'visible';
+    div_erro.innerHTML = resposta;
+    div_erro2.innerHTML = resposta;
+  }
+</script>
